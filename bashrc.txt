@@ -1,0 +1,29 @@
+export PATH=:/anaconda3/bin:/usr/local/bin:./node_modules/.bin:$PATH
+
+export PYTHONPATH=$PYTHONPATH:/System/Library/Frameworks/Python.framework/Versions/2.7/lib/python
+
+alias gs="git status"
+
+alias gb="git branch"
+
+alias gd="git diff"
+
+alias gl="git log"
+
+alias lb="lab -m 0 -v -l"
+
+alias py="python3"
+
+alias ge="git config --global user.email"
+
+alias refresh="source ~/.bash_profile"
+
+alias walmart="git config --global user.email 'lrowan@walmartlabs.com' && refresh"
+
+alias icloud="git config --global user.email 'louis.rowan@icloud.com' && refresh"
+
+alias desktop="cd ~/Desktop"
+
+alias mustang="walmart; cd ~/Desktop/oneWalmart"
+
+alias ll="ls -laG"

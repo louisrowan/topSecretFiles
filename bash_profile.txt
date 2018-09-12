@@ -1,0 +1,60 @@
+export NVM_DIR="$HOME/.nvm"
+
+export OCI_LIB_DIR=~/oci
+
+export OCI_INC_DIR=$OCI_LIB_DIR/sdk/include
+
+export DYLD_LIBRARY_PATH=$OCI_LIB_DIR
+
+source ~/.bashrc
+
+# Setting PATH for Python 3.6
+
+# The original version is saved in .bash_profile.pysave
+
+PATH="/Library/Frameworks/Python.framework/Versions/3.6/bin:${PATH}"
+
+export PATH
+
+
+
+parse_git_branch() {
+
+    git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+
+}
+
+
+
+RED='\[\033[31m\]'
+
+GREEN='\[\033[32m\]'
+
+NC='\[\033[00m\]' # No Color
+
+
+
+git_email() {
+
+    if [ $(git config user.email) = 'lrowan@walmartlabs.com' ]; then
+
+        echo "${GREEN}@walmartLabs${NC}"
+
+    else
+
+        echo "${RED}@icloud${NC}"
+
+    fi
+
+}
+
+
+
+
+
+
+
+export PS1="$(git_email) \W\[\033[32m\]\$(parse_git_branch)\[\033[00m\] $ "
+
+# added by Anaconda3 5.2.0 installer
+export PATH="/anaconda3/bin:$PATH"
